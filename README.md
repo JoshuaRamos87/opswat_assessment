@@ -4,6 +4,8 @@ OPSWAT MetaDefender Cloud API key is required.
 You will need to register for a free account at portal.opswat.com. This will create an account and generate
 a trial apikey for metadefender.opswat.com. The apikey should be displayed on the "Home" tab once you login
 to your portal account. Please note this apikey has rate limiting which you may encounter, this is normal.
+
+Created on a Windows machine with Node.js through PowerShell.
 _____________________________________
 
 ## How to get started
