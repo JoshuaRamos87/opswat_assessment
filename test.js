@@ -4,6 +4,14 @@ const ps = require("prompt-sync")
 const prompt = ps();
 var name = prompt("upload_file ");
 
+
+if(process.argv[2] === undefined)
+{
+    console.log("ERROR: Missing API key command line arguement")
+    console.log("Correct usage: \"npm start <APIKEY>\"")
+    process.exit(1)
+}
+
 function calcSHA256(hashLookUp)
 {
     //retrieve the sha256 of the file in files directory
@@ -29,7 +37,7 @@ function hashLookUp(hashVal)
         "path": '/v4/hash/',
         "headers": 
         {
-            "apikey": "1e5afac83fca16afcd17886c68b6c573"
+            "apikey": process.argv[2]
         }
     };
     options["path"] += hashVal.read().toString().toUpperCase()

@@ -4,7 +4,7 @@
   "description": "simple program to scan a file against the metadefender.opswat.com API",
   "main": "test.js",
   "scripts": {
-    "test": "node test.js"
+    "start": "node test.js"
   },
   "author": "Joshua Ramos",
   "license": "ISC",
