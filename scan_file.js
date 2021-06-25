@@ -1,8 +1,9 @@
 //prompt user input for the name of file
 "use strict";
+const scaneFile = require("./scan_file.js")
 const ps = require("prompt-sync")
 const prompt = ps();
-var name = prompt("upload_file ");
+var fileName = prompt("upload_file ");
 
 
 if(process.argv[2] === undefined)
@@ -17,7 +18,7 @@ function calcSHA256(hashLookUp)
     //retrieve the sha256 of the file in files directory
     let fs = require('fs');
     let crypto = require('crypto');
-    let fd = fs.createReadStream(name);
+    let fd = fs.createReadStream(fileName);
     let hash = crypto.createHash('sha256');
     hash.setEncoding('hex');
 
@@ -60,12 +61,13 @@ function hashLookUp(hashVal)
             {
                 //upload file
                 console.log("ERROR: Not found in the metadefender database")
+                uploadDisplayFile(fileName)
             }
             else
             {
                 //immediately display results
                 display_results(jsonObject)
-                console.log("SUCCESS: Found in the metadefender database")
+                
             }      
         });
     });
