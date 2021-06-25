@@ -2,7 +2,7 @@
   "name": "scan_file",
   "version": "1.0.0",
   "description": "simple program to scan a file against the metadefender.opswat.com API",
-  "main": "test.js",
+  "main": "scan_file.js",
   "scripts": {
     "start": "node scan_file.js"
   },
