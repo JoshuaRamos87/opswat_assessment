@@ -66,6 +66,15 @@ function hashLookUp(hashVal)
 
             let jsonObject = JSON.parse(body.toString())
             
+            //checks if the APIKEY entered was invalid
+            try{
+                if(jsonObject['error']['code'] === 401006)
+                {
+                    console.log("APIKEY invalid, retry again")
+                    process.exit()
+                }
+            }catch(err){}
+
             //checks if error exists in the object which implies the hash lookup was not found
             if(jsonObject['stored'] !== true)  
             {
