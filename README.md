@@ -25,4 +25,4 @@ npm install
 ```
 npm start <APIKEY>
 ```
-Then key in the name of file including file extension to scan a file against our metadefender.opswat.com API
+Then when prompted to upload a file, key in the name of file including the file extension, that is in the current directory. File is now being scanned against the metadefender.opswat.com API
