@@ -12,7 +12,8 @@ The following are instructions to get the program running
 
 ### Requirements:
 
-Latest version of Node was used for this, v14.17.0
+Latest version of Node.js was used for this, v14.17.0
+Get it [here](https://nodejs.org/en/)
 
 ## Installation of dependencies
 
@@ -25,7 +26,7 @@ npm install
 ```
 npm start <APIKEY>
 ```
-Then when prompted to upload a file, key in the name of file including the file extension, that is in the current directory. File is now being scanned against the metadefender.opswat.com API
+Then when prompted to upload a file, key in the name of file including the file extension, that is in the current directory. The file is now being scanned against the metadefender.opswat.com API
 
 ## Author
 Joshua Ramos
